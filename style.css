@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #5a3d5c;
+    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Шапка */
+header {
+    background: linear-gradient(135deg, #e4b2d6 0%, #d38dc9 100%);
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Кнопка */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: white;
+    color: #d38dc9;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+    transition: all 0.3s ease;
+    border: 2px solid white;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(160, 100, 150, 0.3);
+    background: transparent;
+    color: white;
+}
+
+/* Обо мне */
+.about-me {
+    text-align: center;
+    padding: 60px 0;
+    background: white;
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #5a3d5c;
+}
+
+/* Галерея */
+.gallery {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f9f0ff 0%, #fce4ec 100%);
+}
+
+.gallery-columns {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.gallery-column {
+    flex: 1;
+    max-width: 45%;
+}
+
+.gallery-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+}
+
+/* Футер */
+footer {
+    background: #8a4c7d;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+footer a {
+    color: #f0d8e8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .gallery-columns {
+        flex-direction: column;
+    }
+    
+    .gallery-column {
+        max-width: 100%;
+    }
+    
+    header h1 {
+        font-size: 2em;
+    }
+    
+    .about-text {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+}
