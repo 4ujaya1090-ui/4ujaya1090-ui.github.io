@@ -1,3 +1,16 @@
+/* ========= Глобальные переменные ========= */
+:root {
+    --color-primary: #d38dc9;
+    --color-secondary: #8a4c7d;
+    --color-light: #f9f0ff;
+    --color-accent: #e4b2d6;
+    --color-dark: #5a3d5c;
+    --shadow-soft: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-strong: 0 15px 35px rgba(160, 100, 150, 0.25);
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ========= Сброс ========= */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +20,7 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #5a3d5c;
+    color: var(--color-dark);
     background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
 }
 
@@ -17,9 +30,9 @@ body {
     padding: 20px;
 }
 
-/* Шапка */
+/* ========= Шапка ========= */
 header {
-    background: linear-gradient(135deg, #e4b2d6 0%, #d38dc9 100%);
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
     color: white;
     padding: 60px 0;
     text-align: center;
@@ -30,18 +43,18 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* Кнопка */
+/* ========= Кнопка ========= */
 .btn {
     display: inline-block;
     padding: 15px 30px;
     background: white;
-    color: #d38dc9;
+    color: var(--color-primary);
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     margin: 20px 0;
-    transition: all 0.3s ease;
     border: 2px solid white;
+    transition: var(--transition);
 }
 
 .btn:hover {
@@ -51,7 +64,7 @@ header h1 {
     color: white;
 }
 
-/* Обо мне */
+/* ========= Обо мне ========= */
 .about-me {
     text-align: center;
     padding: 60px 0;
@@ -63,13 +76,13 @@ header h1 {
     margin: 0 auto;
     font-size: 18px;
     line-height: 1.8;
-    color: #5a3d5c;
+    color: var(--color-dark);
 }
 
-/* Галерея */
+/* ========= Галерея ========= */
 .gallery {
     padding: 60px 0;
-    background: linear-gradient(135deg, #f9f0ff 0%, #fce4ec 100%);
+    background: linear-gradient(135deg, var(--color-light) 0%, #fce4ec 100%);
 }
 
 .gallery-columns {
@@ -86,17 +99,17 @@ header h1 {
 .gallery-image {
     width: 100%;
     border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
 }
 
 .gallery-image:hover {
     transform: scale(1.02);
 }
 
-/* Футер */
+/* ========= Футер ========= */
 footer {
-    background: #8a4c7d;
+    background: var(--color-secondary);
     color: white;
     text-align: center;
     padding: 40px 0;
@@ -111,26 +124,7 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .gallery-columns {
-        flex-direction: column;
-    }
-    
-    .gallery-column {
-        max-width: 100%;
-    }
-    
-    header h1 {
-        font-size: 2em;
-    }
-    
-    .about-text {
-        font-size: 16px;
-        padding: 0 20px;
-    }
-}
-/* Секция с результатами */
+/* ========= Секция с результатами ========= */
 .results {
     padding: 60px 0;
     background: white;
@@ -138,7 +132,7 @@ footer a:hover {
 
 .results-title {
     text-align: center;
-    color: #8a4c7d;
+    color: var(--color-secondary);
     margin-bottom: 40px;
     font-size: 2em;
 }
@@ -161,12 +155,16 @@ footer a:hover {
     width: 100%;
     max-width: 200px;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+    filter: brightness(0.95);
 }
 
 .result-image:hover {
-    transform: scale(1.05);
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: var(--shadow-strong);
+    filter: brightness(1.05);
+    z-index: 10;
 }
 
 .result-info {
@@ -179,74 +177,54 @@ footer a:hover {
     font-size: 1.5em;
 }
 
-.result-info p {
-    color: #5a3d5c;
-    margin-bottom: 15px;
+.result-info p,
+.result-info ul {
+    color: var(--color-dark);
     line-height: 1.6;
 }
 
 .result-info ul {
-    color: #5a3d5c;
     padding-left: 20px;
 }
 
 .result-info li {
     margin-bottom: 8px;
-    line-height: 1.5;
 }
 
 .result-divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, #e4b2d6, transparent);
+    background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
     margin: 40px 0;
     opacity: 0.6;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .result-pair {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-    }
-    
-    .result-images {
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    .result-image {
-        max-width: 150px;
-    }
-}
-
-/* Анимации для карточек косметики */
+/* ========= Косметика ========= */
 .cosmetic-item {
     background: white;
     padding: 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-soft);
     max-width: 350px;
-    transition: all 0.4s ease;
-    transform: translateY(0);
+    transition: var(--transition);
     border: 2px solid transparent;
 }
 
 .cosmetic-item:hover {
     transform: translateY(-10px) scale(1.05);
-    box-shadow: 0 15px 35px rgba(160, 100, 150, 0.25);
-    border-color: #e4b2d6;
-    background: linear-gradient(135deg, #ffffff 0%, #f9f0ff 100%);
+    box-shadow: var(--shadow-strong);
+    border-color: var(--color-accent);
+    background: linear-gradient(135deg, #ffffff 0%, var(--color-light) 100%);
 }
+
 .cosmetic-image {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
-    transition: all 0.4s ease;
     filter: grayscale(20%);
+    transition: var(--transition);
 }
 
 .cosmetic-item:hover .cosmetic-image {
@@ -255,16 +233,16 @@ footer a:hover {
     box-shadow: 0 8px 25px rgba(211, 141, 201, 0.3);
 }
 
-/* Анимации для карточек советов */
+/* ========= Советы ========= */
 .tip-card {
-    background: linear-gradient(135deg, #f9f0ff 0%, #ffffff 100%);
+    background: linear-gradient(135deg, var(--color-light) 0%, #ffffff 100%);
     padding: 30px;
     border-radius: 15px;
-    border: 2px solid #e4b2d6;
+    border: 2px solid var(--color-accent);
     flex: 1;
     min-width: 300px;
     max-width: 400px;
-    transition: all 0.4s ease;
+    transition: var(--transition);
     position: relative;
     overflow: hidden;
 }
@@ -283,7 +261,7 @@ footer a:hover {
 .tip-card:hover {
     transform: translateY(-8px) scale(1.03);
     box-shadow: 0 20px 40px rgba(160, 100, 150, 0.2);
-    border-color: #d38dc9;
+    border-color: var(--color-primary);
     background: linear-gradient(135deg, #ffffff 0%, #fce4ec 100%);
 }
 
@@ -292,10 +270,10 @@ footer a:hover {
 }
 
 .tip-card h3 {
-    color: #8a4c7d;
+    color: var(--color-secondary);
     margin-bottom: 15px;
     font-size: 1.3em;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .tip-card:hover h3 {
@@ -304,84 +282,75 @@ footer a:hover {
 }
 
 .tip-card ul {
-    color: #5a3d5c;
+    color: var(--color-dark);
     padding-left: 20px;
     margin: 15px 0;
-    transition: all 0.3s ease;
-}
-
-.tip-card:hover ul {
-    transform: translateX(3px);
+    transition: var(--transition);
 }
 
 .tip-card li {
     margin-bottom: 8px;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .tip-card li:hover {
-    color: #8a4c7d;
+    color: var(--color-secondary);
     transform: translateX(5px);
 }
 
 .tip-recommend {
-    color: #8a4c7d !important;
+    color: var(--color-secondary) !important;
     font-style: italic;
     margin-top: 15px;
     padding-top: 15px;
     border-top: 1px solid #f0d8e8;
-    transition: all 0.3s ease;
+    transition: var(--transition);
 }
 
 .tip-card:hover .tip-recommend {
-    color: #d38dc9 !important;
-    border-color: #e4b2d6;
+    color: var(--color-primary) !important;
+    border-color: var(--color-accent);
 }
 
-/* Анимации для картинок результатов */
-.result-image {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: all 0.4s ease;
-    filter: brightness(0.95);
-}
-
-.result-image:hover {
-    transform: scale(1.1) rotate(2deg);
-    box-shadow: 0 12px 30px rgba(160, 100, 150, 0.25);
-    filter: brightness(1.05);
-    z-index: 10;
-}
-
-/* Плавные переходы для всех hover-эффектов */
-.cosmetic-item,
-.tip-card,
-.result-image,
-.gallery-image {
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-/* Эффект поднятия для всех карточек */
-.cosmetic-item:hover,
-.tip-card:hover {
-    transform: translateY(-10px);
-}
-
-/* Свечение при наведении */
-.tip-card:hover,
-.cosmetic-item:hover {
-    box-shadow: 0 15px 35px rgba(211, 141, 201, 0.3);
-}
-
-/* Адаптивность для анимаций */
+/* ========= Адаптивность ========= */
 @media (max-width: 768px) {
+    .gallery-columns {
+        flex-direction: column;
+    }
+
+    .gallery-column {
+        max-width: 100%;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .about-text {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .result-pair {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .result-images {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .result-image {
+        max-width: 150px;
+    }
+
     .cosmetic-item:hover,
     .tip-card:hover {
         transform: translateY(-5px) scale(1.02);
     }
-    
+
     .result-image:hover {
         transform: scale(1.05) rotate(1deg);
     }
