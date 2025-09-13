@@ -219,3 +219,107 @@ footer a:hover {
         max-width: 150px;
     }
 }
+/* Стили для косметики */
+.cosmetics {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f9f0ff 0%, #fce4ec 100%);
+}
+
+.cosmetics-title {
+    text-align: center;
+    color: #8a4c7d;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.cosmetics-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.cosmetic-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 350px;
+}
+
+.cosmetic-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.cosmetic-item h3 {
+    color: #6a3c5d;
+    margin-bottom: 15px;
+}
+
+/* Стили для советов */
+.beauty-tips {
+    padding: 60px 0;
+    background: white;
+}
+
+.tips-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tip-card {
+    background: linear-gradient(135deg, #f9f0ff 0%, #ffffff 100%);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #e4b2d6;
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.tip-card h3 {
+    color: #8a4c7d;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.tip-card ul {
+    color: #5a3d5c;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.tip-card li {
+    margin-bottom: 8px;
+}
+
+.tip-recommend {
+    color: #8a4c7d !important;
+    font-style: italic;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #f0d8e8;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .cosmetics-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tips-grid {
+        flex-direction: column;
+    }
+    
+    .tip-card {
+        min-width: auto;
+    }
+}
