@@ -355,3 +355,64 @@ footer a:hover {
         transform: scale(1.05) rotate(1deg);
     }
 }
+/* ========= Галерея (фикс для разных размеров фото) ========= */
+.gallery-columns {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.gallery-column {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition);
+}
+
+/* ========= Результаты процедур (до/после рядом) ========= */
+.result-images {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-start;
+}
+
+.result-image {
+    width: 150px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ========= Косметика — адаптивная сетка ========= */
+.cosmetics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* ========= Советы — одинаковая высота карточек ========= */
+.tips-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.tip-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
