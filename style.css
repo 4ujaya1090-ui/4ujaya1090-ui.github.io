@@ -1,13 +1,12 @@
-/* ========= Глобальные переменные ========= */
 :root {
     --color-primary: #d38dc9;
     --color-secondary: #8a4c7d;
     --color-light: #f9f0ff;
     --color-accent: #e4b2d6;
-    --color-dark: #5a3d5c;
-    --shadow-soft: 0 5px 15px rgba(0,0,0,0.1);
+    --color-dark: #3a2c3d;
+    --shadow-soft: 0 5px 15px rgba(0,0,0,0.08);
     --shadow-strong: 0 15px 35px rgba(160, 100, 150, 0.25);
-    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition: all 0.3s ease-in-out;
 }
 
 /* ========= Сброс ========= */
@@ -18,50 +17,65 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Arial, sans-serif;
     line-height: 1.6;
     color: var(--color-dark);
-    background: linear-gradient(135deg, #fafafa 0%, #ffffff 100%);
+    background: #fafafa;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 /* ========= Шапка ========= */
 header {
-    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-primary) 100%);
-    color: white;
-    padding: 60px 0;
-    text-align: center;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-/* ========= Кнопка ========= */
-.btn {
-    display: inline-block;
-    padding: 15px 30px;
     background: white;
-    color: var(--color-primary);
-    text-decoration: none;
-    border-radius: 50px;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+
+.site-title a {
+    font-size: 1.5em;
     font-weight: bold;
-    margin: 20px 0;
-    border: 2px solid white;
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+.site-nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.site-nav a:hover {
+    color: var(--color-primary);
+}
+
+.btn {
+    padding: 10px 20px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
     transition: var(--transition);
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(160, 100, 150, 0.3);
-    background: transparent;
-    color: white;
+    background: var(--color-secondary);
 }
 
 /* ========= Обо мне ========= */
@@ -69,6 +83,12 @@ header h1 {
     text-align: center;
     padding: 60px 0;
     background: white;
+}
+
+.about-me h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
 }
 
 .about-text {
@@ -89,22 +109,24 @@ header h1 {
     display: flex;
     gap: 30px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .gallery-column {
-    flex: 1;
-    max-width: 45%;
+    flex: 1 1 300px;
+    max-width: 400px;
 }
 
 .gallery-image {
     width: 100%;
-    border-radius: 12px;
+    border-radius: 15px;
     box-shadow: var(--shadow-soft);
     transition: var(--transition);
 }
 
 .gallery-image:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-strong);
 }
 
 /* ========= Футер ========= */
@@ -124,18 +146,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* ========= Секция с результатами ========= */
-.results {
-    padding: 60px 0;
-    background: white;
-}
-
-.results-title {
-    text-align: center;
-    color: var(--color-secondary);
-    margin-bottom: 40px;
-    font-size: 2em;
-}
 
 .result-pair {
     display: flex;
