@@ -68,26 +68,27 @@ body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;colo
 /* RESULTS - BEFORE/AFTER */
 .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
 .result-card{background:var(--white);padding:14px;border-radius:12px;box-shadow:var(--shadow)}
-.ba-wrap{
+.ba-wrap {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  max-height: 480px;    /* ДОБАВИЛИ: ограничение высоты */
-  min-height: 320px;         /* ДОБАВИЛИ */
-  cursor: col-resize;
-  display: flex;        /* ДОБАВИЛИ */
-  align-items: center;  /* ДОБАВИЛИ */
-  justify-content: center; /* ДОБАВИЛИ */
-  background: #f9f9f9;  /* ДОБАВИЛИ: фон на случай маленьких фото */
+  max-height: 480px;
+  min-height: 320px; /* держит минимальную высоту */
+  background: #f9f9f9;
 }
-.ba-img{
+
+.ba-img {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;         /* ИЗМЕНИЛИ: было height:100% */
-  object-fit: contain;  /* ИЗМЕНИЛИ: было cover */
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;          /* ← возвращаем auto */
+  object-fit: contain;   /* не режет фото */
+  margin: auto;          /* центрирует */
   display: block;
 }
+
 .ba-after{z-index:1}
 .ba-before{z-index:2}
 .ba-range{position:absolute;left:10px;right:10px;bottom:10px;z-index:4}
