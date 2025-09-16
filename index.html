@@ -1,128 +1,165 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Королина | Профессиональный косметолог</title>
-    <meta name="description" content="Сертифицированный косметолог с медицинским образованием. Индивидуальный подход и современные методики ухода за кожей">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Косметолог Лина</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Шапка -->
+  <header>
+    <div class="container header-content">
+      <div class="logo">
+        <h1>Лина</h1>
+        <p>Косметолог • уход за кожей</p>
+      </div>
+      <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="procedures.html">Процедуры</a>
+        <a href="components.html">Косметика</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="experience.html">Дневник</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Престижная шапка -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <h1>Королина Иванова</h1>
-                    <p>Сертифицированный косметолог</p>
-                </div>
-                <nav class="main-nav">
-                    <a href="#about">Обо мне</a>
-                    <a href="#services">Услуги</a>
-                    <a href="#results">Результаты</a>
-                    <a href="#reviews">Отзывы</a>
-                    <a href="#contact">Контакты</a>
-                </nav>
-            </div>
+  <!-- Герой -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Красивая кожа начинается здесь</h2>
+      <p>Индивидуальный уход, профессиональные процедуры и честные рекомендации</p>
+      <a href="#contacts" class="btn-primary">Записаться</a>
+    </div>
+  </section>
+
+  <!-- Обо мне -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-text">
+        <h3>Обо мне</h3>
+        <p>Я — косметолог с практикой и живым интересом к науке о коже. Работаю без фальши: честно разбираю составы и подбираю процедуры, которые реально работают.</p>
+        <ul>
+          <li>Индивидуальный подход</li>
+          <li>Научный разбор косметики</li>
+          <li>Безопасные методики</li>
+        </ul>
+      </div>
+      <div class="about-photo">
+        <img src="images/me.jpg" alt="Косметолог Лина">
+      </div>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section id="services">
+    <div class="container">
+      <h2>Услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Очищение кожи</h3>
+          <p>Удаление загрязнений, черных точек, улучшение текстуры.</p>
+          <span class="price">от 2500 ₽</span>
         </div>
-    </header>
-
-    <!-- Герой секция -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h2>Профессиональный уход за кожей</h2>
-                <p>Индивидуальный подход на основе доказательной косметологии</p>
-                <a href="#contact" class="btn-primary">Записаться на консультацию</a>
-            </div>
+        <div class="service-card">
+          <h3>Химический пилинг</h3>
+          <p>Разглаживание, осветление, омоложение кожи.</p>
+          <span class="price">от 3500 ₽</span>
         </div>
-    </section>
-
-    <!-- Обо мне -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Обо мне</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <h3>Образование и опыт</h3>
-                    <p>Дипломированный специалист с медицинским образованием. Опыт работы в эстетической косметологии — 5 лет.</p>
-                    <ul>
-                        <li>🎓 Высшее медицинское образование</li>
-                        <li>📜 Сертификаты по аппаратной косметологии</li>
-                        <li>⭐️ Регулярное повышение квалификации</li>
-                        <li>💫 Участник международных конференций</li>
-                    </ul>
-                </div>
-                <div class="about-photo">
-                    <img src="https://placehold.co/400x500/f9f0ff/5a3d5c?text=Фото+Королины" alt="Королина - профессиональный косметолог">
-                </div>
-            </div>
+        <div class="service-card">
+          <h3>Лечение акне</h3>
+          <p>Снижение воспалений, профилактика рубцов.</p>
+          <span class="price">индивидуально</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Услуги -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2>Услуги</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Консультация</h3>
-                    <p>Диагностика кожи и подбор индивидуальной программы ухода</p>
-                    <span class="price">1 500 ₽</span>
-                </div>
-                <div class="service-card">
-                    <h3>Чистка лица</h3>
-                    <p>Профессиональная механическая чистка с последующим уходом</p>
-                    <span class="price">3 500 ₽</span>
-                </div>
-                <div class="service-card">
-                    <h3>Пилинги</h3>
-                    <p>Химические и энзимные пилинги для обновления кожи</p>
-                    <span class="price">4 200 ₽</span>
-                </div>
-            </div>
+  <!-- Результаты процедур -->
+  <section id="results">
+    <div class="container">
+      <h2>Результаты процедур</h2>
+      <div class="results-grid">
+        <div class="result-card">
+          <img src="images/before1.jpg" alt="До процедуры">
+          <img src="images/after1.jpg" alt="После процедуры">
+          <p><strong>Очищение:</strong> чистые поры, гладкая кожа.</p>
         </div>
-    </section>
-
-    <!-- Контакты -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Контакты</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Свяжитесь со мной</h3>
-                    <p>📞 Телефон: +7 (XXX) XXX-XX-XX</p>
-                    <p>📧 Email: korolina@example.com</p>
-                    <p>📍 Адрес: г. Москва, ул. Примерная, д. 123</p>
-                    
-                    <div class="social-links">
-                        <a href="https://instagram.com/ваш_инстаграм" class="social-link">Instagram</a>
-                        <a href="https://t.me/K_cosmouz" class="social-link">Telegram</a>
-                        <a href="https://wa.me/79991234567" class="social-link">WhatsApp</a>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Записаться на прием</h3>
-                    <form>
-                        <input type="text" placeholder="Ваше имя" required>
-                        <input type="tel" placeholder="Телефон" required>
-                        <textarea placeholder="Ваш вопрос или желаемая процедура"></textarea>
-                        <button type="submit">Отправить заявку</button>
-                    </form>
-                </div>
-            </div>
+        <div class="result-card">
+          <img src="images/before2.jpg" alt="До пилинга">
+          <img src="images/after2.jpg" alt="После пилинга">
+          <p><strong>Пилинг:</strong> ровный тон, меньше пигментации.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Футер -->
-    <footer>
-        <div class="container">
-            <p>© 2024 Королина Иванова. Все права защищены</p>
-            <p>Лицензия: №ЛО-77-01-012345 от 01.01.2023</p>
+  <!-- Отзывы -->
+  <section id="reviews">
+    <div class="container">
+      <h2>Отзывы клиентов</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <p>«После курса у Лины моя кожа впервые за долгое время сияет. Честно, без лишних процедур!»</p>
+          <span>— Анна, 29 лет</span>
         </div>
-    </footer>
+        <div class="review-card">
+          <p>«Пилинг прошёл безболезненно, результат увидела сразу. Теперь хожу регулярно.»</p>
+          <span>— Мария, 35 лет</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Разбор косметики -->
+  <section id="cosmetics">
+    <div class="container">
+      <h2>Разбор косметики</h2>
+      <div class="cosmetics-grid">
+        <div class="cosmetic-card">
+          <h3>Увлажняющий крем X</h3>
+          <p>⭐️⭐️⭐️⭐️⭐️ — идеально для сухой кожи, лёгкая текстура.</p>
+        </div>
+        <div class="cosmetic-card">
+          <h3>Витаминная сыворотка Y</h3>
+          <p>⭐️⭐️⭐️⭐️ — хорошо осветляет, но может вызывать покраснение.</p>
+        </div>
+        <div class="cosmetic-card">
+          <h3>SPF защита</h3>
+          <p>Обязательно: предотвращает фотостарение и пигментацию.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contacts">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <h3>Связаться со мной</h3>
+        <p>Телефон: +7 (999) 123-45-67</p>
+        <p>Instagram: @lina.skin</p>
+        <div class="social-links">
+          <a href="#" class="social-link">Instagram</a>
+          <a href="#" class="social-link">Telegram</a>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Оставить заявку</h3>
+        <form>
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="email" placeholder="Ваш email" required>
+          <textarea placeholder="Сообщение" rows="4" required></textarea>
+          <button type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer>
+    <p>© 2025 Косметолог Лина. Все права защищены.</p>
+  </footer>
 </body>
 </html>
