@@ -1,302 +1,54 @@
-:root {
-    --color-primary: #8a4c7d;
-    --color-secondary: #6a3c5d;
-    --color-accent: #d38dc9;
-    --color-light: #f9f0ff;
-    --color-dark: #3a2c3d;
-    --color-white: #ffffff;
-    --shadow-soft: 0 5px 20px rgba(138, 76, 125, 0.1);
-    --shadow-strong: 0 10px 30px rgba(138, 76, 125, 0.2);
-    --transition: all 0.3s ease;
+/* Результаты процедур */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.result-card {
+  text-align: center;
+}
+.result-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-soft);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Отзывы */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.review-card {
+  background: var(--color-light);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-soft);
+  font-style: italic;
+}
+.review-card span {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: var(--color-primary);
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: var(--color-dark);
-    background: var(--color-white);
+/* Косметика */
+.cosmetics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+.cosmetic-card {
+  background: var(--color-white);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+  transition: var(--transition);
 }
-
-/* Шапка */
-header {
-    background: var(--color-white);
-    box-shadow: var(--shadow-soft);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.logo h1 {
-    font-size: 1.8em;
-    color: var(--color-primary);
-    margin-bottom: 5px;
-}
-
-.logo p {
-    color: var(--color-secondary);
-    font-size: 0.9em;
-}
-
-.main-nav {
-    display: flex;
-    gap: 30px;
-}
-
-.main-nav a {
-    text-decoration: none;
-    color: var(--color-dark);
-    font-weight: 500;
-    transition: var(--transition);
-}
-
-.main-nav a:hover {
-    color: var(--color-primary);
-}
-
-/* Герой секция */
-.hero {
-    background: linear-gradient(135deg, var(--color-light) 0%, var(--color-white) 100%);
-    padding: 100px 0;
-    text-align: center;
-}
-
-.hero-content h2 {
-    font-size: 2.5em;
-    color: var(--color-primary);
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    color: var(--color-secondary);
-    margin-bottom: 30px;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 15px 30px;
-    background: var(--color-primary);
-    color: var(--color-white);
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: var(--transition);
-}
-
-.btn-primary:hover {
-    background: var(--color-secondary);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-strong);
-}
-
-/* Секции */
-section {
-    padding: 80px 0;
-}
-
-h2 {
-    text-align: center;
-    color: var(--color-primary);
-    font-size: 2.2em;
-    margin-bottom: 50px;
-}
-
-/* Обо мне */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-}
-
-.about-text h3 {
-    color: var(--color-secondary);
-    margin-bottom: 20px;
-    font-size: 1.5em;
-}
-
-.about-text ul {
-    list-style: none;
-    margin-top: 20px;
-}
-
-.about-text li {
-    margin-bottom: 10px;
-    padding-left: 30px;
-    position: relative;
-}
-
-.about-text li::before {
-    content: "•";
-    color: var(--color-accent);
-    font-size: 1.5em;
-    position: absolute;
-    left: 0;
-    top: -5px;
-}
-
-.about-photo img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: var(--shadow-strong);
-}
-
-/* Услуги */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background: var(--color-white);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: var(--shadow-soft);
-    text-align: center;
-    transition: var(--transition);
-}
-
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-strong);
-}
-
-.service-card h3 {
-    color: var(--color-primary);
-    margin-bottom: 15px;
-}
-
-.price {
-    display: block;
-    font-size: 1.3em;
-    color: var(--color-secondary);
-    font-weight: bold;
-    margin-top: 15px;
-}
-
-/* Контакты */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.contact-info h3 {
-    color: var(--color-secondary);
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    margin-bottom: 15px;
-}
-
-.social-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.social-link {
-    padding: 10px 20px;
-    background: var(--color-primary);
-    color: var(--color-white);
-    text-decoration: none;
-    border-radius: 20px;
-    transition: var(--transition);
-}
-
-.social-link:hover {
-    background: var(--color-secondary);
-}
-
-.contact-form {
-    background: var(--color-light);
-    padding: 30px;
-    border-radius: 15px;
-}
-
-.contact-form h3 {
-    color: var(--color-primary);
-    margin-bottom: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1em;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    background: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.contact-form button:hover {
-    background: var(--color-secondary);
-}
-
-/* Футер */
-footer {
-    background: var(--color-primary);
-    color: var(--color-white);
-    text-align: center;
-    padding: 30px 0;
-}
-
-/* Адаптивность */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .main-nav {
-        margin-top: 20px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .about-grid,
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero-content h2 {
-        font-size: 2em;
-    }
-    
-    section {
-        padding: 50px 0;
-    }
+.cosmetic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-strong);
 }
