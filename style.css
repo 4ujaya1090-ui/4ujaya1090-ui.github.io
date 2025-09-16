@@ -65,28 +65,83 @@ body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;colo
 .card-foot{margin-top:12px;display:flex;justify-content:flex-end}
 .price{color:var(--secondary);font-weight:700}
 
-/* RESULTS - BEFORE/AFTER */
-.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
-.result-card{background:var(--white);padding:14px;border-radius:12px;box-shadow:var(--shadow)}
-.ba-wrap {
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #f9f9f9;
-  display: inline-block;  /* подстраивается под картинку */
+/* ========== RESULTS - BEFORE/AFTER ========== */
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px;margin-top:30px}
+.result-card{background:var(--white);padding:20px;border-radius:16px;box-shadow:var(--shadow);transition:transform 0.3s ease}
+.result-card:hover{transform:translateY(-5px)}
+
+/* БЛОК ДЛЯ ФОТО ДО/ПОСЛЕ */
+.ba-wrap{
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  max-height:480px;
+  min-height:320px;
+  cursor:col-resize;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f9f9f9;
+  margin:0 auto;
 }
 
-.ba-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  position: relative; /* убираем absolute */
+/* ОБЩИЕ СТИЛИ ДЛЯ ФОТО */
+.ba-img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;
 }
 
-.ba-after{z-index:1}
-.ba-before{z-index:2}
-.ba-range{position:absolute;left:10px;right:10px;bottom:10px;z-index:4}
+/* ФОТО "ПОСЛЕ" - ФОН */
+.ba-after{
+  position:relative;
+  z-index:1;
+}
+
+/* ФОТО "ДО" - ПЕРЕДВИЖНАЯ ЧАСТЬ */
+.ba-before{
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:2;
+  clip-path:polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+/* ПОЛЗУНОК */
+.ba-range{
+  position:absolute;
+  left:10px;
+  right:10px;
+  bottom:10px;
+  z-index:3;
+  appearance:none;
+  height:4px;
+  background:rgba(255,255,255,0.5);
+  border-radius:2px;
+  outline:none;
+}
+
+.ba-range::-webkit-slider-thumb{
+  appearance:none;
+  width:20px;
+  height:20px;
+  background:var(--primary);
+  border-radius:50%;
+  cursor:grab;
+  border:3px solid white;
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+
+.ba-range::-moz-range-thumb{
+  width:20px;
+  height:20px;
+  background:var(--primary);
+  border-radius:50%;
+  cursor:grab;
+  border:3px solid white;
+  box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
 
 /* REVIEWS */
 .reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
@@ -110,12 +165,13 @@ body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;colo
 .reveal{opacity:0;transform:translateY(20px);transition:opacity 600ms ease, transform 600ms ease}
 .reveal.inview{opacity:1;transform:none}
 
-/* Responsive */
+/* ========== АДАПТИВНОСТЬ ========== */
 @media(max-width:900px){
   .hero-grid{grid-template-columns:1fr 320px}
   .about-grid{grid-template-columns:1fr 300px}
   .contact-grid{grid-template-columns:1fr}
 }
+
 @media(max-width:720px){
   .nav{display:none}
   .burger{display:block}
@@ -127,21 +183,26 @@ body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;colo
   .contact-grid{grid-template-columns:1fr}
   .photo-badge{left:50%;transform:translateX(-50%)}
 }
-/* Мобильная адаптация */
+
+/* Мобильная версия для до/после */
 @media (max-width: 768px) {
-    .ba-wrap {
-        max-height: 300px !important;
-    }
-    
-    .result-grid {
-        grid-template-columns: 1fr !important;
-        gap: 15px;
-    }
-    
-    /* Принудительное отображение */
-    .results,
-    .result-grid,
-    .result-card {
-        display: block !important;
-    }
+  .ba-wrap {
+      max-height: 300px;
+      min-height: 250px;
+  }
+  
+  .result-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+  }
+  
+  .result-card {
+      padding: 15px;
+  }
+  
+  .ba-range {
+      left: 5px;
+      right: 5px;
+      bottom: 5px;
+  }
 }
