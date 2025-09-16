@@ -73,7 +73,7 @@ body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;colo
   overflow: hidden;
   border-radius: 10px;
   max-height: 480px;    /* ДОБАВИЛИ: ограничение высоты */
-  height: auto;         /* ДОБАВИЛИ */
+  min-height: 320px;         /* ДОБАВИЛИ */
   cursor: col-resize;
   display: flex;        /* ДОБАВИЛИ */
   align-items: center;  /* ДОБАВИЛИ */
@@ -84,7 +84,7 @@ body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;colo
   position: absolute;
   inset: 0;
   width: 100%;
-  height: auto;         /* ИЗМЕНИЛИ: было height:100% */
+  height: 100%;         /* ИЗМЕНИЛИ: было height:100% */
   object-fit: contain;  /* ИЗМЕНИЛИ: было cover */
   display: block;
 }
