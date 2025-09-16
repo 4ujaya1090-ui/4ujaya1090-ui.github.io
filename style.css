@@ -131,3 +131,21 @@ body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;colo
   .contact-grid{grid-template-columns:1fr}
   .photo-badge{left:50%;transform:translateX(-50%)}
 }
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    .ba-wrap {
+        max-height: 300px !important;
+    }
+    
+    .result-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+    
+    /* Принудительное отображение */
+    .results,
+    .result-grid,
+    .result-card {
+        display: block !important;
+    }
+}
