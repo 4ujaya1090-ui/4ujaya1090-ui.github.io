@@ -1,242 +1,115 @@
-:root {
-    --color-primary: #8a4c7d;
-    --color-secondary: #6a3c5d;
-    --color-accent: #d38dc9;
-    --color-light: #f9f0ff;
-    --color-dark: #3a2c3d;
-    --color-white: #ffffff;
-    --shadow-soft: 0 5px 20px rgba(138, 76, 125, 0.1);
-    --shadow-strong: 0 10px 30px rgba(138, 76, 125, 0.2);
-    --transition: all 0.3s ease;
+:root{
+  --primary:#8a4c7d;
+  --secondary:#6a3c5d;
+  --accent:#d38dc9;
+  --light:#f9f0ff;
+  --dark:#2f2630;
+  --white:#fff;
+  --shadow: 0 8px 24px rgba(46,20,46,0.08);
+  --transition: 300ms cubic-bezier(.22,.9,.32,1);
+  --container:1200px;
 }
 
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    color: var(--color-dark);
-    background: var(--color-white);
-    line-height: 1.6;
-}
+/* Reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Roboto,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--dark);background:var(--white);line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/* HEADER */
+.site-header{position:sticky;top:0;z-index:80;background:linear-gradient(90deg,#fff,#fff);box-shadow:var(--shadow)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:20px}
+.brand-link{text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.brand-name{color:var(--primary);font-family:"Playfair Display",serif;font-size:1.3rem;letter-spacing:0.6px}
+.brand-sub{color:var(--secondary);font-size:0.85rem;margin-top:4px}
 
-/* Шапка */
-header {
-    background: var(--color-white);
-    box-shadow: var(--shadow-soft);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-.logo h1 {
-    font-size: 1.8em;
-    color: var(--color-primary);
-    margin: 0;
-}
-.main-nav {
-    display: flex;
-    gap: 20px;
-}
-.main-nav a {
-    text-decoration: none;
-    color: var(--color-dark);
-    transition: var(--transition);
-}
-.main-nav a:hover {
-    color: var(--color-primary);
-}
+/* NAV */
+.nav{display:flex;gap:10px;align-items:center}
+.nav-btn{background:transparent;border-radius:999px;padding:8px 14px;text-decoration:none;color:var(--dark);font-weight:500;transition:var(--transition);box-shadow:none}
+.nav-btn:hover{transform:translateY(-3px);background:linear-gradient(90deg,var(--light),#fff);color:var(--primary);box-shadow:var(--shadow)}
+.nav-cta{background:var(--primary);color:#fff}
+.nav-cta:hover{background:var(--secondary);color:#fff}
 
-/* Герой */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, var(--color-light), var(--color-white));
-}
-.hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
-.hero-text {
-    flex: 1;
-}
-.hero-text h2 {
-    font-size: 2.5em;
-    color: var(--color-primary);
-}
-.hero-photo img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 20px;
-    box-shadow: var(--shadow-strong);
-}
-.btn-primary {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 15px 30px;
-    background: var(--color-primary);
-    color: var(--color-white);
-    border-radius: 30px;
-    text-decoration: none;
-    transition: var(--transition);
-}
-.btn-primary:hover {
-    background: var(--color-secondary);
-    transform: translateY(-3px);
-}
+/* BURGER - hidden until mobile */
+.burger{display:none;border:0;background:transparent;width:44px;height:44px;border-radius:8px;cursor:pointer}
 
-/* Секции */
-section {
-    padding: 80px 0;
-}
-h2 {
-    text-align: center;
-    margin-bottom: 40px;
-    color: var(--color-primary);
-}
+/* HERO */
+.hero{padding:64px 0;background:linear-gradient(135deg,var(--light),#fff)}
+.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center}
+.hero-left h2{font-family:"Playfair Display",serif;font-size:2.2rem;color:var(--primary);margin-bottom:12px}
+.hero-left p{color:var(--secondary);margin-bottom:18px}
+.hero-actions{display:flex;gap:12px}
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:600;transition:var(--transition)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{transform:translateY(-3px);background:var(--secondary)}
+.btn-ghost{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+.hero-photo{position:relative;display:flex;justify-content:center}
+.hero-photo img{width:100%;max-width:400px;border-radius:16px;box-shadow:var(--shadow);display:block}
+.photo-badge{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,0.9);padding:6px 10px;border-radius:8px;font-weight:600;color:var(--primary);font-size:0.9rem}
 
-/* Обо мне */
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-.about-photo img {
-    width: 100%;
-    border-radius: 15px;
-    box-shadow: var(--shadow-strong);
-}
+/* SECTIONS */
+.section{padding:64px 0}
+.section h3{font-family:"Playfair Display",serif;color:var(--primary);font-size:1.6rem;margin-bottom:18px;text-align:center}
 
-/* Услуги */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-.service-card {
-    padding: 20px;
-    border-radius: 15px;
-    background: var(--color-white);
-    text-align: center;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition);
-}
-.service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-strong);
-}
-.price {
-    margin-top: 10px;
-    font-weight: bold;
-    color: var(--color-secondary);
-}
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.about-list{margin-top:12px;list-style:none}
+.about-list li{padding-left:20px;position:relative;margin-bottom:8px}
+.about-list li::before{content:"•";position:absolute;left:0;top:0;color:var(--accent);font-size:18px}
 
-/* Результаты */
-.results .result-pair {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    margin-bottom: 30px;
-}
-.results img {
-    width: 100%;
-    max-width: 200px;
-    border-radius: 10px;
-    box-shadow: var(--shadow-soft);
-}
+/* CARDS GRID */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:var(--white);padding:18px;border-radius:12px;box-shadow:var(--shadow);transition:var(--transition)}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(46,20,46,0.12)}
+.card h4{color:var(--primary);margin-bottom:8px}
+.card p{color:var(--secondary);font-size:0.95rem}
+.card-foot{margin-top:12px;display:flex;justify-content:flex-end}
+.price{color:var(--secondary);font-weight:700}
 
-/* Отзывы */
-.reviews .review-card {
-    background: var(--color-light);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-soft);
-}
-.reviews span {
-    display: block;
-    margin-top: 10px;
-    font-weight: bold;
-    color: var(--color-secondary);
-}
+/* RESULTS - BEFORE/AFTER */
+.result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:20px}
+.result-card{background:var(--white);padding:14px;border-radius:12px;box-shadow:var(--shadow)}
+.ba-wrap{position:relative;overflow:hidden;border-radius:10px;height:220px}
+.ba-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.ba-after{z-index:1}
+.ba-before{z-index:2}
+.ba-range{position:absolute;left:10px;right:10px;bottom:10px;z-index:4}
 
-/* Разбор косметики */
-.cosmetics .cosmetic-card {
-    background: var(--color-white);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-    box-shadow: var(--shadow-soft);
-}
+/* REVIEWS */
+.reviews-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.review{background:var(--light);padding:18px;border-radius:10px;box-shadow:var(--shadow);font-style:italic}
+.review cite{display:block;margin-top:10px;font-weight:700;color:var(--primary)}
 
-/* Контакты */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-.contact-form {
-    background: var(--color-light);
-    padding: 20px;
-    border-radius: 10px;
-}
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-.contact-form button {
-    width: 100%;
-    padding: 12px;
-    background: var(--color-primary);
-    color: var(--color-white);
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: var(--transition);
-}
-.contact-form button:hover {
-    background: var(--color-secondary);
-}
+/* COSMETICS */
+.cosmetics .card{min-height:110px;text-align:left}
 
-/* Футер */
-footer {
-    background: var(--color-primary);
-    color: var(--color-white);
-    text-align: center;
-    padding: 20px 0;
-}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 420px;gap:24px}
+.contact-form{background:var(--light);padding:16px;border-radius:10px}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e8e5ea;margin-bottom:10px}
+.contact-form button{background:var(--primary);color:#fff;padding:10px;border-radius:8px;border:0;cursor:pointer}
+.contact-form button:hover{background:var(--secondary)}
 
-/* Адаптив */
-@media (max-width: 768px) {
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-grid,
-    .contact-grid,
-    .results .result-pair {
-        grid-template-columns: 1fr;
-        flex-direction: column;
-    }
-    .hero-photo img {
-        max-width: 300px;
-    }
+/* FOOTER */
+.site-footer{background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;padding:18px 0;text-align:center}
+
+/* Reveal animation */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 600ms ease, transform 600ms ease}
+.reveal.inview{opacity:1;transform:none}
+
+/* Responsive */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr 320px}
+  .about-grid{grid-template-columns:1fr 300px}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .nav{display:none}
+  .burger{display:block}
+  .hero-grid{grid-template-columns:1fr}
+  .cards-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .result-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .photo-badge{left:50%;transform:translateX(-50%)}
 }
