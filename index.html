@@ -212,21 +212,20 @@
     window.addEventListener('scroll', revealOnScroll);
     window.addEventListener('load', revealOnScroll);
 
-    // BEFORE / AFTER slider
+    // BEFORE / AFTER slider - ОБНОВЛЕННАЯ ВЕРСИЯ
     document.querySelectorAll('.ba-wrap').forEach(wrap => {
       const before = wrap.querySelector('.ba-before');
-      const after = wrap.querySelector('.ba-after');
       const range = wrap.querySelector('.ba-range');
-      // set stacking
-      before.style.clipPath = `inset(0 50% 0 0)`;
-      // update function
+      
+      // Обновленная функция
       const update = (v) => {
         const percent = v;
-        before.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+        before.style.clipPath = `polygon(0 0, ${percent}% 0, ${percent}% 100%, 0 100%)`;
       };
+      
       range && range.addEventListener('input', (e) => update(e.target.value));
-      range && update(range.value);
+      range && update(range.value || 50); // Значение по умолчанию 50%
     });
-  </script>
+</script>
 </body>
 </html>
