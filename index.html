@@ -1,242 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Косметолог Королина — профессиональный уход</title>
-  <meta name="description" content="Косметолог Королина — сертифицированный специалист. Процедуры, разбор косметики и реальные результаты.">
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Косметолог Королина | Профессиональный уход за кожей</title>
+    <meta name="description" content="Сертифицированный косметолог Королина. Процедуры, консультации, индивидуальный подход">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon (добавим позже) -->
 </head>
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <a href="index.html" class="brand-link">
-          <h1>Косметолог <span class="brand-name">Королина</span></h1>
-          <p class="brand-sub">Сертифицированный косметолог</p>
-        </a>
-      </div>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="logo">
+                    <a href="#" class="logo__link">
+                        <h1 class="logo__title">Косметолог <span class="logo__accent">Королина</span></h1>
+                        <p class="logo__subtitle">Сертифицированный специалист</p>
+                    </a>
+                </div>
 
-      <nav class="nav" aria-label="Главное меню">
-        <a class="nav-btn" href="index.html">Главная</a>
-        <a class="nav-btn" href="procedures.html">Процедуры</a>
-        <a class="nav-btn" href="components.html">Составы</a>
-        <a class="nav-btn" href="gallery.html">Галерея</a>
-        <a class="nav-btn" href="experience.html">Дневник</a>
-        <a class="nav-btn nav-cta" href="https://t.me/K_cosmouz" target="_blank" rel="noopener">Записаться</a>
-      </nav>
-      <button class="burger" aria-label="menu" aria-expanded="false"></button>
-    </div>
-  </header>
+                <nav class="nav" id="nav">
+                    <a href="#about" class="nav__link">Обо мне</a>
+                    <a href="#services" class="nav__link">Услуги</a>
+                    <a href="#results" class="nav__link">Результаты</a>
+                    <a href="#reviews" class="nav__link">Отзывы</a>
+                    <a href="#contact" class="nav__link nav__link--cta">Записаться</a>
+                </nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <h2>Красота с доказательным подходом</h2>
-        <p>Персональные программы, безопасные процедуры и честный разбор косметики — чтобы кожа выглядела и чувствовалась лучше.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Записаться</a>
-          <a class="btn btn-ghost" href="#results">Смотреть результаты</a>
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
         </div>
-      </div>
-      <div class="hero-photo">
-        <!-- Поставь своё фото в корень как korolina-cert.jpg -->
-        <img src="https://raw.githubusercontent.com/4ujaya1090-ui/4ujaya1090-ui.github.io/main/photo_2025-09-12_09-17-59.jpg
-" alt="Королина — косметолог" onerror="this.src='https://placehold.co/450x500/f9f0ff/5a3d5c?text=Korolina'">
-        <div class="photo-badge">Сертификат</div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- ABOUT -->
-  <section id="about" class="section about">
-    <div class="container about-grid reveal">
-      <div>
-        <h3>Обо мне</h3>
-        <p>Я — Королина, дипломированный косметолог с медицинским образованием и практикой в эстетической медицине. Работаю с реальными результатами, без пустых обещаний.</p>
-        <ul class="about-list">
-          <li>🎓 Медицинское образование</li>
-          <li>📜 Сертификаты по аппаратной косметологии</li>
-          <li>⭐️ Индивидуальные программы ухода</li>
-        </ul>
-      </div>
-      <div class="about-photo-card">
-        <img src="korolina-cert.jpg" alt="Королина с сертификатом" onerror="this.src='https://placehold.co/400x500/f9f0ff/5a3d5c?text=Фото'">
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES -->
-  <section id="services" class="section services reveal">
-    <div class="container">
-      <h3>Услуги</h3>
-      <div class="cards-grid">
-        <article class="card">
-          <h4>Профессиональное очищение</h4>
-          <p>Глубокая чистка, удаление комедонов и улучшение текстуры.</p>
-          <div class="card-foot"><span class="price">от 2500 ₽</span></div>
-        </article>
-        <article class="card">
-          <h4>Химический пилинг</h4>
-          <p>Осветление пигментации, обновление клеток и улучшение тона.</p>
-          <div class="card-foot"><span class="price">от 3500 ₽</span></div>
-        </article>
-        <article class="card">
-          <h4>Лечение акне</h4>
-          <p>Комплексный подход — терапия, профилактика и поддержка кожи.</p>
-          <div class="card-foot"><span class="price">индивидуально</span></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- RESULTS with BEFORE/AFTER slider -->
-  <section id="results" class="section results reveal">
-    <div class="container">
-      <h3>Результаты процедур</h3>
-
-      <div class="result-grid">
-  <div class="result-card">
-    <div class="ba-wrap">
-      <!-- После -->
-      <img class="ba-img ba-after" src="https://4ujaya1090-ui.github.io/images/chistka2_2025-09-14_.jpg" alt="После">
-      <!-- До -->
-      <img class="ba-img ba-before" src="https://4ujaya1090-ui.github.io/images/chistka_2025-09-14_11-27-12.jpg" alt="До">
-      
-      <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="before-after">
-    </div>
-    <h4>Профессиональная чистка лица — курс 3 процедуры</h4>
-    <p>Глубокое очищение пор, улучшение текстуры кожи, свежий тон лица.</p>
-  </div>
-</div>
-   <div class="result-card">
-          <div class="ba-wrap">
-            <img class="ba-img ba-after" src="https://placehold.co/600x480/fce4ec/5a3d5c?text=After+2" alt="После">
-            <img class="ba-img ba-before" src="https://placehold.co/600x480/f9f0ff/5a3d5c?text=Before+2" alt="До">
-            <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="before-after-2">
-          </div>
-          <h4>Химический пилинг — курс 4–6 процедур</h4>
-          <p>Разглаживание текстуры, уменьшение пигментации.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__grid">
+                <div class="hero__content">
+                    <h2 class="hero__title">Красота с доказательным подходом</h2>
+                    <p class="hero__text">Персональные программы, безопасные процедуры и честный разбор косметики — чтобы кожа выглядела и чувствовалась лучше.</p>
+                    <div class="hero__actions">
+                        <a href="#contact" class="btn btn--primary">Записаться на консультацию</a>
+                        <a href="#results" class="btn btn--secondary">Смотреть результаты</a>
+                    </div>
+                </div>
+                
+                <div class="hero__image">
+                    <img src="https://raw.githubusercontent.com/4ujaya1090-ui/4ujaya1090-ui.github.io/main/photo_2025-09-12_09-17-59.jpg" 
+                         alt="Косметолог Королина" 
+                         class="hero__img"
+                         loading="lazy">
+                    <div class="hero__badge">Сертифицированный специалист</div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- REVIEWS -->
-  <!-- Исправленная секция RESULTS -->
-<section id="results" class="section results reveal">
-  <div class="container">
-    <h3>Результаты процедур</h3>
-
-    <div class="result-grid">
-      <div class="result-card">
-        <div class="ba-wrap">
-          <img class="ba-img ba-after" src="images/after-1.jpg" alt="После чистки лица">
-          <img class="ba-img ba-before" src="images/before-1.jpg" alt="До чистки лица">
-          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Сравнение до и после">
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section__title">Обо мне</h2>
+            <div class="about__grid">
+                <div class="about__content">
+                    <p class="about__text">Я — Королина, дипломированный косметолог с медицинским образованием и практикой в эстетической медицине. Работаю с реальными результатами, без пустых обещаний.</p>
+                    <ul class="about__list">
+                        <li class="about__item">🎓 Медицинское образование</li>
+                        <li class="about__item">📜 Сертификаты по аппаратной косметологии</li>
+                        <li class="about__item">⭐️ Индивидуальные программы ухода</li>
+                    </ul>
+                </div>
+                <div class="about__image">
+                    <img src="https://placehold.co/400x500/f9f0ff/5a3d5c?text=Фото+с+сертификатом" 
+                         alt="Королина с сертификатом" 
+                         class="about__img"
+                         loading="lazy">
+                </div>
+            </div>
         </div>
-        <h4>Профессиональная чистка лица — курс 3 процедуры</h4>
-        <p>Глубокое очищение пор, улучшение текстуры кожи, свежий тон лица.</p>
-      </div>
-      
-      <div class="result-card">
-        <div class="ba-wrap">
-          <img class="ba-img ba-after" src="https://placehold.co/600x480/fce4ec/5a3d5c?text=After+2" alt="После пилинга">
-          <img class="ba-img ba-before" src="https://placehold.co/600x480/f9f0ff/5a3d5c?text=Before+2" alt="До пилинга">
-          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Сравнение до и после">
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <div class="container">
+            <h2 class="section__title">Услуги</h2>
+            <div class="services__grid">
+                <div class="service-card">
+                    <h3 class="service-card__title">Профессиональное очищение</h3>
+                    <p class="service-card__text">Глубокая чистка, удаление комедонов и улучшение текстуры.</p>
+                    <div class="service-card__price">от 2500 ₽</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3 class="service-card__title">Химический пилинг</h3>
+                    <p class="service-card__text">Осветление пигментации, обновление клеток и улучшение тона.</p>
+                    <div class="service-card__price">от 3500 ₽</div>
+                </div>
+                
+                <div class="service-card">
+                    <h3 class="service-card__title">Лечение акне</h3>
+                    <p class="service-card__text">Комплексный подход — терапия, профилактика и поддержка кожи.</p>
+                    <div class="service-card__price">индивидуально</div>
+                </div>
+            </div>
         </div>
-        <h4>Химический пилинг — курс 4–6 процедур</h4>
-        <p>Разглаживание текстуры, уменьшение пигментации.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-  <!-- COSMETICS / TIPS -->
-  <section id="cosmetics" class="section cosmetics reveal">
-    <div class="container">
-      <h3>Разбор косметики и советы</h3>
-      <div class="cards-grid">
-        <article class="card">
-          <h4>SPF: что важно</h4>
-          <p>SPF 30–50 — ежедневно. Обновлять каждые 2 часа на солнце. Рекомендации: La Roche-Posay, Avene, Isdin.</p>
-        </article>
-        <article class="card">
-          <h4>Очищение</h4>
-          <p>Двойное очищение вечером, подбирать средства по типу кожи, избегать агрессивных мыл.</p>
-        </article>
-        <article class="card">
-          <h4>Маски и уход</h4>
-          <p>2–3 раза в неделю: глиняные/гидрогелевые/питательные по назначению.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+    <!-- Results Section -->
+    <section id="results" class="section results">
+        <div class="container">
+            <h2 class="section__title">Результаты процедур</h2>
+            <div class="results__grid">
+                <!-- Слайдеры будут добавлены позже -->
+            </div>
+        </div>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section contact reveal">
-    <div class="container contact-grid">
-      <div>
-        <h3>Контакты</h3>
-        <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
-        <p>Telegram: <a href="https://t.me/K_cosmouz" target="_blank">@K_cosmouz</a></p>
-        <p>Instagram: <a href="#" target="_blank">@korolina_beauty</a></p>
-      </div>
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section__title">Контакты</h2>
+            <div class="contact__grid">
+                <div class="contact__info">
+                    <p>Телефон: <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                    <p>Telegram: <a href="https://t.me/K_cosmouz" target="_blank">@K_cosmouz</a></p>
+                    <p>Instagram: <a href="#" target="_blank">@korolina_beauty</a></p>
+                </div>
+                
+                <form class="contact__form" id="contact-form">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                    <textarea name="message" placeholder="Кратко о запросе" rows="4"></textarea>
+                    <button type="submit" class="btn btn--primary">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-      <form class="contact-form" onsubmit="event.preventDefault(); alert('Спасибо — заявка отправлена (демо)');">
-        <input name="name" placeholder="Ваше имя" required>
-        <input name="phone" placeholder="Телефон" required>
-        <textarea name="msg" placeholder="Кратко о запросе" rows="4"></textarea>
-        <button class="btn btn-primary" type="submit">Отправить заявку</button>
-      </form>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">© 2025 Косметолог Королина. Все права защищены.</p>
+        </div>
+    </footer>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      <small>© 2025 Косметолог Королина. Все права защищены.</small>
-    </div>
-  </footer>
-
-  <!-- Minimal JS (burger + reveal + before-after) -->
-  <script>
-    // BURGER (mobile)
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav');
-    burger && burger.addEventListener('click', () => {
-      const expanded = burger.getAttribute('aria-expanded') === 'true';
-      burger.setAttribute('aria-expanded', String(!expanded));
-      document.querySelector('.nav')?.classList.toggle('nav-open');
-    });
-
-    // Simple scroll reveal
-    const revealOnScroll = () => {
-      document.querySelectorAll('.reveal').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) el.classList.add('inview');
-      });
-    };
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
-
-    // BEFORE / AFTER slider - ОБНОВЛЕННАЯ ВЕРСИЯ
-    document.querySelectorAll('.ba-wrap').forEach(wrap => {
-      const before = wrap.querySelector('.ba-before');
-      const range = wrap.querySelector('.ba-range');
-      
-      // Обновленная функция
-      const update = (v) => {
-        const percent = v;
-        before.style.clipPath = `polygon(0 0, ${percent}% 0, ${percent}% 100%, 0 100%)`;
-      };
-      
-      range && range.addEventListener('input', (e) => update(e.target.value));
-      range && update(range.value || 50); // Значение по умолчанию 50%
-<script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
