@@ -152,6 +152,7 @@ button {
 .hero {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
+ margin-top: 80px; /* Высота header */
 }
 
 .hero__grid {
@@ -504,3 +505,20 @@ button {
 .mb-2 { margin-bottom: 1rem; }
 .mb-3 { margin-bottom: 1.5rem; }
 .mb-4 { margin-bottom: 2rem; }
+/* Fix for fixed header overlapping content */
+@media (min-width: 769px) {
+    .hero {
+        margin-top: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 70px;
+    }
+}
+
+/* Additional header height compensation */
+section {
+    scroll-margin-top: 100px;
+}
