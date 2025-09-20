@@ -1,3 +1,4 @@
+console.log('Script version 2 loaded - mobile test');
 // Mobile Menu Functionality
 class MobileMenu {
     constructor() {
@@ -20,6 +21,7 @@ class MobileMenu {
         console.log('Initializing mobile menu...');
         
         this.burger.addEventListener('click', (e) => {
+            console.log('Burger clicked - mobile version');
             e.stopPropagation();
             this.toggleMenu();
         });
