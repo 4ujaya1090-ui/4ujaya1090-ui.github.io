@@ -150,7 +150,7 @@ button {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    padding: 120px 0 80px;
+    padding: 150px 0 80px;
     background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
   padding-top: 200px; /* ← ДОБАВЛЯЕМ ОТДЕЛЬНО PADDING-TOP */
 }
