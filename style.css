@@ -152,7 +152,7 @@ button {
 .hero {
     padding: 120px 0 80px;
     background: linear-gradient(135deg, var(--light) 0%, var(--white) 100%);
- margin-top: 80px; /* Высота header */
+  padding-top: 200px; /* ← ДОБАВЛЯЕМ ОТДЕЛЬНО PADDING-TOP */
 }
 
 .hero__grid {
