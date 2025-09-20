@@ -1,8 +1,8 @@
 // Mobile Menu Functionality
 class MobileMenu {
     constructor() {
-        this.burger = document.getElementById('burger');
-        this.nav = document.getElementById('nav');
+        this.burger = document.querySelector('burger');
+        this.nav = document.querySelector('nav');
         this.init();
     }
 
