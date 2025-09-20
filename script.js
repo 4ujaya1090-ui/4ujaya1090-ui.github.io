@@ -1,8 +1,15 @@
 // Mobile Menu Functionality
 class MobileMenu {
     constructor() {
-        this.burger = document.querySelector('burger');
-        this.nav = document.querySelector('nav');
+        this.burger = document.querySelector('.burger');
+        this.nav = document.querySelector('.nav');
+        
+        // Проверяем, существуют ли элементы
+        if (!this.burger || !this.nav) {
+            console.error('Mobile menu elements not found!');
+            return;
+        }
+        
         this.init();
     }
 
