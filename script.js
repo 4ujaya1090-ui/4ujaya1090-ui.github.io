@@ -120,3 +120,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log('Website initialized successfully!');
 });
+// Before / After Slider
+document.querySelectorAll('.ba-wrap').forEach(wrap => {
+    const before = wrap.querySelector('.ba-before');
+    const range = wrap.querySelector('.ba-range');
+
+    const update = (value) => {
+        before.style.clipPath = `polygon(0 0, ${value}% 0, ${value}% 100%, 0 100%)`;
+    };
+
+    range.addEventListener('input', (e) => update(e.target.value));
+    update(50);
+});
