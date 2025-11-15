@@ -522,3 +522,84 @@ button {
 section {
     scroll-margin-top: 100px;
 }
+/* ===== BEFORE / AFTER RESULTS ===== */
+.results__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Контейнер */
+.ba-wrap {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    background: #f4f4f4;
+    cursor: col-resize;
+}
+
+/* Картинки */
+.ba-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* "До" — верхний слой, будет обрезаться */
+.ba-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+/* Ползунок */
+.ba-range {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    z-index: 5;
+    background: transparent;
+}
+
+/* Стиль трека */
+.ba-range::-webkit-slider-runnable-track {
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* Стиль бегунка */
+.ba-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin-top: -8px;
+    cursor: grab;
+}
+
+.ba-range::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+/* MOBILE FIX — чтобы фото не сжималось по высоте */
+@media (max-width: 768px) {
+    .ba-wrap {
+        max-height: none !important;
+    }
+    .ba-img, .ba-before {
+        object-fit: contain;
+    }
+}
+
