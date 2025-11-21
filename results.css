@@ -1,1 +1,98 @@
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.header {
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #222;
+}
+.nav__link {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+}
+
+/* Page Title */
+.results-hero {
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+}
+.results-title {
+    font-size: 2.4rem;
+    margin-bottom: 0.4rem;
+    color: #222;
+}
+.results-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Results Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.result-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+.result-card:hover {
+    transform: translateY(-5px);
+}
+.result-img {
+    width: 100%;
+    display: block;
+}
+.result-info {
+    padding: 1rem 1.2rem 1.4rem;
+}
+.result-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+.result-desc {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Back Button */
+.back-btn-wrap {
+    padding: 2rem 0;
+    text-align: center;
+}
+.back-btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background: #f4f4f4;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+.back-btn:hover {
+    background: #e8e8e8;
+}
 
