@@ -1,5 +1,5 @@
-console.log('Script version 2 loaded - mobile test');
-// Mobile Menu Functionality
+console.log('Script loaded');
+
 class MobileMenu {
     constructor() {
         this.burger = document.querySelector('.burger');
@@ -42,7 +42,7 @@ class MobileMenu {
         this.burger.classList.toggle('active');
         this.nav.classList.toggle('active');
 
-        document.body.style.overflow = isExpanded ? '' : 'hidden';
+        document.body.style.overflow = isExpanded ? 'hidden' : '';
     }
 
     closeMenu() {
@@ -80,6 +80,7 @@ class SmoothScroll {
 class ContactForm {
     constructor() {
         this.form = document.getElementById('contact-form');
+
         if (this.form) {
             this.form.addEventListener('submit', (e) => this.handleSubmit(e));
         }
@@ -96,7 +97,5 @@ document.addEventListener('DOMContentLoaded', () => {
     new MobileMenu();
     new SmoothScroll();
     new ContactForm();
-});
-    
     console.log('Website initialized successfully!');
 });
