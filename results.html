@@ -5,103 +5,81 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Результаты процедур — Королина</title>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="results.css">
+    <link rel="stylesheet" href="results.css" />
 </head>
+
 <body>
 
-<!-- Header -->
-<header class="header">
-    <div class="container">
-        <div class="header__inner">
+    <!-- Header -->
+    <header class="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">Королина</a>
 
-            <div class="logo">
-                <a href="index.html" class="logo__link">
-                    <h1 class="logo__title">
-                        Косметолог <span class="logo__accent">Королина</span>
-                    </h1>
-                    <p class="logo__subtitle">Сертифицированный специалист</p>
-                </a>
-            </div>
-
-            <nav class="nav" id="nav">
-                <a href="index.html#about" class="nav__link">Обо мне</a>
+            <nav class="nav">
                 <a href="index.html#services" class="nav__link">Услуги</a>
-                <a href="index.html#results" class="nav__link">Результаты</a>
-                <a href="index.html#contact" class="nav__link nav__link--cta">Записаться</a>
+                <a href="index.html#about" class="nav__link">О специалисте</a>
+                <a href="index.html#contact" class="nav__link">Контакты</a>
             </nav>
-
-            <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false">
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-                <span class="burger__line"></span>
-            </button>
-
         </div>
-    </div>
-</header>
+    </header>
 
-<!-- Results Title -->
-<section class="results-hero">
-    <div class="container">
-        <h1 class="results-title">Результаты процедур</h1>
-        <p class="results-subtitle">
-            Реальные кейсы, подтверждающие эффективность подхода
-        </p>
-    </div>
-</section>
+    <!-- Results Page Title -->
+    <section class="results-hero">
+        <div class="container">
+            <h1 class="results-title">Результаты процедур</h1>
+            <p class="results-subtitle">
+                Реальные кейсы, подтверждающие эффективность подхода
+            </p>
+        </div>
+    </section>
 
-<!-- Results Grid -->
-<section class="results-section">
-    <div class="container results-grid">
+    <!-- Results Grid -->
+    <section class="results-section">
+        <div class="container results-grid">
 
-        <!-- Card 1 -->
-        <div class="result-card">
-            <img src="images/udalenie-filera.jpg" alt="Удаление филлера" class="result-img">
-            <div class="result-info">
-                <h3 class="result-name">Удаление филлера</h3>
-                <p class="result-desc">
-                    Коррекция асимметрии и восстановление естественного объёма без деформаций.
-                </p>
+            <!-- Card 1 -->
+            <div class="result-card">
+                <img src="images/udalenie-filera.jpg" alt="Удаление филлера" class="result-img" />
+                <div class="result-info">
+                    <h3 class="result-name">Удаление филлера</h3>
+                    <p class="result-desc">
+                        Коррекция асимметрии и восстановление естественного объёма без деформаций.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <!-- Card 2 -->
-        <div class="result-card">
-            <img src="images/mezo_veki2.jpg" alt="Мезотерапия век" class="result-img">
-            <div class="result-info">
-                <h3 class="result-name">Мезотерапия век</h3>
-                <p class="result-desc">
-                    Снижение отёчности, устранение тусклости и улучшение плотности кожи.
-                </p>
+            <!-- Card 2 -->
+            <div class="result-card">
+                <img src="images/mezo_veki2.jpg" alt="Мезотерапия век" class="result-img" />
+                <div class="result-info">
+                    <h3 class="result-name">Мезотерапия век</h3>
+                    <p class="result-desc">
+                        Снижение отёчности, устранение тусклости и улучшение плотности кожи.
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="result-card">
-            <img src="images/rastyshki.jpg" alt="Работа с рубцами" class="result-img">
-            <div class="result-info">
-                <h3 class="result-name">Работа с рубцами</h3>
-                <p class="result-desc">
-                    Курс из 3 процедур с интервалом 2 недели. Инъекционная терапия препаратом Collost Micro.
-                </p>
+            <!-- Card 3 -->
+            <div class="result-card">
+                <img src="images/rastyshki.jpg" alt="Работа с послеродовыми рубцами" class="result-img" />
+                <div class="result-info">
+                    <h3 class="result-name">Работа с послеродовыми рубцами</h3>
+                    <p class="result-desc">
+                        3 процедуры, каждые две недели. Инъекционная терапия против рубцов — collost micro.
+                    </p>
+                </div>
             </div>
-        </div>
 
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="container back-btn-wrap">
+        <a href="index.html" class="back-btn">← На главную</a>
     </div>
-</section>
 
-<!-- Back Button -->
-<div class="container back-btn-wrap">
-    <a href="index.html" class="back-btn">← На главную</a>
-</div>
-
-<!-- Script -->
-<script src="script.js"></script>
+    <!-- Script -->
+    <script src="script.js"></script>
 
 </body>
 </html>
